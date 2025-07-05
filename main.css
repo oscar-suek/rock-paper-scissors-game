@@ -1,0 +1,559 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: bs-regular;
+    src: url('./fonts/BarlowSemiCondensed-Regular.ttf');
+}
+
+@font-face {
+    font-family: bs-bold;
+    src: url('./fonts/BarlowSemiCondensed-Bold.ttf');
+}
+
+@font-face {
+    font-family: bs-semibold;
+    src: url('./fonts/BarlowSemiCondensed-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: bs-extrabold;
+    src: url('./fonts/BarlowSemiCondensed-ExtraBold.ttf');
+}
+
+body{
+    background-color: hsl(214, 47%, 23%);
+}
+
+#top-div{
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.c1{
+    font-family: bs-bold;
+    font-size: 36px;
+    color: white;
+    text-transform: uppercase;
+    margin-top: -10px;
+    /* height: 25px; */
+}
+
+#d2{
+    background-color: white;
+    width: 140px;
+    text-align: center;
+    border-radius: 6px;
+    height: 99px;
+    padding-top: 10px;
+}
+
+#s-text{
+    text-transform: uppercase;
+    color: hsl(229, 64%, 46%);
+    font-family: bs-semibold;
+    letter-spacing: 1.5px;
+}
+
+#s-num{
+    color: hsl(229, 25%, 31%);
+    font-family: bs-bold;
+    font-size: 54px;
+    margin-top: -5px;
+}
+
+#svg-cover1{
+    color: white;
+    width: 50px;
+    height: 50px;
+}
+
+#paper{
+    background-image: url('./images/icon-paper.svg');
+    width: 120px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: 35px;
+    border-radius: 50%;
+}
+
+#paper-cover{
+    width: 160px;
+    height: 160px;
+    justify-items: center;
+    align-content: center;
+    background-color: hsl(230, 89%, 62%);
+    border-radius: 50%;
+    border-bottom: 7px solid hsl(230, 89%, 52%);
+    position: absolute;
+    top: 240px;
+    left: 480px;
+    cursor: pointer;
+}
+
+#rock{
+    background-image: url('./images/icon-rock.svg');
+    width: 120px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: 35px;
+    border-radius: 50%;
+}
+
+#rock-cover{
+    width: 160px;
+    height: 160px;
+    justify-items: center;
+    align-content: center;
+    background-color: hsl(349, 71%, 52%);
+    border-radius: 50%;
+    border-bottom: 7px solid hsl(349, 71%, 42%);
+    position: absolute;
+    top: 420px;
+    left: 580px;
+    cursor: pointer;
+}
+
+#scissors{
+    background-image: url('./images/icon-scissors.svg');
+    width: 120px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: 35px;
+    border-radius: 50%;
+}
+
+#scissors-cover{
+    width: 160px;
+    height: 160px;
+    justify-items: center;
+    align-content: center;
+    background-color: hsl(39, 89%, 49%);
+    border-radius: 50%;
+    border-bottom: 7px solid hsl(39, 89%, 39%);
+    position: absolute;
+    top: 240px;
+    left: 680px;
+    cursor: pointer;
+}
+
+#line1{
+    margin-left: 37%;
+    margin-top: 120px;
+}
+
+#rules{
+    width: 120px;
+    border: 1px solid white;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-left: 88%;
+    border-radius: 10px;
+    font-family: bs-semibold;
+    letter-spacing: 1.5px;
+    position: fixed;
+    bottom: 20px;
+    cursor: pointer;
+}
+
+#g-choice{
+    display: block;
+}
+
+#picked{
+    width: 70%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-family: bs-semibold;
+    font-size: 23px;
+    letter-spacing: 1.5px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}
+
+.select-rock{
+    background-image: url('./images/icon-rock.svg');
+    width: 160px;
+    height: 160px;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: 80px;
+    background-position: 40px;
+    border-radius: 50%;
+}
+
+.select-rock-cover{
+    width: 200px;
+    height: 200px;
+    justify-items: center;
+    align-content: center;
+    background-color: hsl(349, 71%, 52%);
+    border-radius: 50%;
+    border-bottom: 7px solid hsl(349, 71%, 42%);
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.select-scissors{
+    background-image: url('./images/icon-scissors.svg');
+    width: 160px;
+    height: 160px;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: 80px;
+    background-position: 40px;
+    border-radius: 50%;
+}
+
+.select-scissors-cover{
+    width: 200px;
+    height: 200px;
+    justify-items: center;
+    align-content: center;
+    background-color: hsl(39, 89%, 49%);
+    border-radius: 50%;
+    border-bottom: 7px solid hsl(39, 89%, 39%);
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.select-paper{
+    background-image: url('./images/icon-paper.svg');
+    width: 160px;
+    height: 160px;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: 80px;
+    background-position: 40px;
+    border-radius: 50%;
+}
+
+.select-paper-cover{
+    width: 200px;
+    height: 200px;
+    justify-items: center;
+    align-content: center;
+    background-color: hsl(230, 89%, 62%);
+    border-radius: 50%;
+    border-bottom: 7px solid hsl(230, 89%, 52%);
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#player-choice{
+    margin-left: -30px;
+}
+
+#p1{
+    font-family: bs-bold;
+    font-size: 40px;
+    text-align: center;
+}
+
+#p-again{
+    background-color: white;
+    border-radius: 8px;
+    width: 170px;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: hsl(349, 70%, 56%);
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#win-lose{
+    margin-top: 70px;
+}
+
+#show-rules{
+    position: absolute;
+    background-color: hsl(0, 0%, 0%, 75%);
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    align-content: center;
+}
+
+#r-div{
+    background-color: white;
+    width: 350px;
+    padding-left: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 6px;
+}
+
+#rd1{
+    display: flex;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 20px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    font-family: bs-bold;
+    color: hsl(229, 25%, 31%);
+}
+
+#rd1 p{
+    font-size: 28px;
+}
+
+#rd1 div{
+    margin-top: 6px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+#paper{
+    background-image: url('./images/icon-paper.svg');
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: 15px;
+    border-radius: 50%;
+}
+
+#paper-cover{
+    width: 120px;
+    height: 120px;
+    justify-items: center;
+    align-content: center;
+    background-color: hsl(230, 89%, 62%);
+    border-radius: 50%;
+    border-bottom: 7px solid hsl(230, 89%, 52%);
+    position: absolute;
+    top: 30%;
+    left: 6%;
+    cursor: pointer;
+}
+
+#rock{
+    background-image: url('./images/icon-rock.svg');
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: 15px;
+    border-radius: 50%;
+}
+
+#rock-cover{
+    width: 120px;
+    height: 120px;
+    justify-items: center;
+    align-content: center;
+    background-color: hsl(349, 71%, 52%);
+    border-radius: 50%;
+    border-bottom: 7px solid hsl(349, 71%, 42%);
+    position: absolute;
+    top: 55%;
+    left: 36%;
+    cursor: pointer;
+}
+
+#scissors{
+    background-image: url('./images/icon-scissors.svg');
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: 15px;
+    border-radius: 50%;
+}
+
+#scissors-cover{
+    width: 120px;
+    height: 120px;
+    justify-items: center;
+    align-content: center;
+    background-color: hsl(39, 89%, 49%);
+    border-radius: 50%;
+    border-bottom: 7px solid hsl(39, 89%, 39%);
+    position: absolute;
+    top: 30%;
+    left: 64%;
+    cursor: pointer;
+}
+
+#rules{
+    width: 120px;
+    border: 1px solid white;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-left: 33%;
+    border-radius: 10px;
+    font-family: bs-semibold;
+    letter-spacing: 1.5px;
+    position: fixed;
+    bottom: 80px;
+    cursor: pointer;
+}
+
+
+#top-div{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#line1{
+    margin-left: 9%;
+}
+
+.c1{
+    font-size: 26px;
+    margin-top: 0px;
+}
+
+#d2{
+    width: 100px;
+}
+
+.select-rock{
+    background-image: url('./images/icon-rock.svg');
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: 25px;
+    background-position: 10px;
+    border-radius: 50%;
+}
+
+.select-rock-cover{
+    width: 90px;
+    height: 90px;
+    justify-items: center;
+    align-content: center;
+    background-color: hsl(349, 71%, 52%);
+    border-radius: 50%;
+    border-bottom: 7px solid hsl(349, 71%, 42%);
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.select-scissors{
+    background-image: url('./images/icon-scissors.svg');
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: 25px;
+    background-position: 10px;
+    border-radius: 50%;
+}
+
+.select-scissors-cover{
+    width: 90px;
+    height: 90px;
+    justify-items: center;
+    align-content: center;
+    background-color: hsl(39, 89%, 49%);
+    border-radius: 50%;
+    border-bottom: 7px solid hsl(39, 89%, 39%);
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.select-paper{
+    background-image: url('./images/icon-paper.svg');
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: 25px;
+    background-position: 10px;
+    border-radius: 50%;
+}
+
+.select-paper-cover{
+    width: 90px;
+    height: 90px;
+    justify-items: center;
+    align-content: center;
+    background-color: hsl(230, 89%, 62%);
+    border-radius: 50%;
+    border-bottom: 7px solid hsl(230, 89%, 52%);
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#player-choice{
+    margin-left: 0px;
+}
+
+#p1{
+    font-size: 23px;
+}
+
+#p-again{
+    width: 170px;
+}
+
+#win-lose{
+    margin-top: 40px;
+    position: absolute;
+    top: 45%;
+    left: 28%;
+    /* display: initial; */
+}
+
+#picked{
+    margin-left: 40px;
+    margin-right: 0px;
+    font-size: 16px;
+    justify-content: space-between;
+}
+
+#l2{
+    margin-left: -20px;
+}
+/* 
+#c-choice{
+    margin-left: -100px;
+} */
+}
