@@ -552,6 +552,10 @@ body{
 #l2{
     margin-left: -20px;
 }
+
+body{
+    height: 820px
+}
 /* 
 #c-choice{
     margin-left: -100px;
