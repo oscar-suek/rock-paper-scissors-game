@@ -156,6 +156,7 @@ function anotherRound(){
         mainDiv.style.display = 'block'
         newDiv.style.display = 'none'
         newDiv.style.width = '70%'
+        newDiv.style.maxWidth = '500px'
         computerChoiceDiv.innerHTML = ""
     })
 }
