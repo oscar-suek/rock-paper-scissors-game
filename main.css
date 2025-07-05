@@ -355,7 +355,7 @@ body{
     border-radius: 50%;
     border-bottom: 7px solid hsl(230, 89%, 52%);
     position: absolute;
-    top: 30%;
+    top: 35%;
     left: 6%;
     cursor: pointer;
 }
@@ -379,7 +379,7 @@ body{
     border-radius: 50%;
     border-bottom: 7px solid hsl(349, 71%, 42%);
     position: absolute;
-    top: 55%;
+    top: 65%;
     left: 36%;
     cursor: pointer;
 }
@@ -403,7 +403,7 @@ body{
     border-radius: 50%;
     border-bottom: 7px solid hsl(39, 89%, 39%);
     position: absolute;
-    top: 30%;
+    top: 35%;
     left: 64%;
     cursor: pointer;
 }
@@ -420,7 +420,7 @@ body{
     font-family: bs-semibold;
     letter-spacing: 1.5px;
     position: fixed;
-    bottom: 30px;
+    bottom: 40px;
     cursor: pointer;
 }
 
@@ -557,8 +557,4 @@ body{
 body{
     height: 820px
 }
-/* 
-#c-choice{
-    margin-left: -100px;
-} */
 }
